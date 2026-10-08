@@ -1,4 +1,4 @@
-# LuxeCompare — Prototype Concept No. 2
+# LuxeCompare — Prototype Concept No. 3
 
 An interactive web prototype for luxury purchase decisions. Uses only illustrative mock data; product prices, reviews, availability, and policies are not live or verified.
 
@@ -16,15 +16,15 @@ npm run dev -- --port 3000
 
 ## Happy path
 
-1. Search for a black shoulder bag, or use a suggested category.
-2. Adjust the budget and style, select priorities, and weight each selected priority from 1 (slightly important) to 5 (essential).
-3. Review the Gucci Jackie 1961, Prada Re-Edition 2005, and Saint Laurent Le 5 à 7 shortlist.
+1. Describe a shopping goal in natural language, including a budget and priorities.
+2. Click **Find my shortlist** to interpret the goal and view the matching demo bags directly.
+3. Review the interpreted criteria and adjust the retained 1–5 priority weights on the shortlist if desired.
 4. Select at least two products and compare their details.
-5. Read the weighted recommendation, its factor-by-factor score explanation, and each product's tradeoffs.
-6. Choose any product to complete the decision. Review the comparison or start again.
+5. Read the same weighted recommendation, score explanation, and tradeoffs.
+6. Choose a product to complete the decision, or edit the goal and try again.
 
-Broad category searches use the three-bag demo collection. Searches naming a featured brand or product narrow that collection. Budget filters products and priorities influence the recommendation. No authentication, checkout, payment, or backend is included. Bag illustrations are local SVGs. Optional Google Fonts fall back to system fonts.
+The mock interpreter recognizes dollar budgets (including $3,000 or 3k), everyday use, versatility, reviews, value for money, and timeless/minimal/modern style terms. It uses the same three black shoulder bags. Unspecified budget and style default to $3,000 and Timeless. Mentioned priorities start at 3/5, “matters” at 4/5, and “most important” at 5/5. This is a local rules-based demo, with no AI service or backend. No authentication, checkout, or payment is included. Illustrations are local SVGs; optional Google Fonts fall back to system fonts.
 
-## Concept No. 2 scoring
+## Retained Concept No. 2 scoring
 
-The four existing priority toggles now have 1–5 importance sliders. The recommendation averages the selected mock factor ratings weighted by importance, then retains the original 0.30 bonus for matching the chosen style. Reviews use stars × 2; value uses 10 minus price in thousands of dollars. The explanation shows each weight, its percentage, its score contribution, and the winner versus the next-best compared product. All other steps, products, and visual design stay the same.
+The four existing priority toggles now have 1–5 importance sliders. The recommendation averages the selected mock factor ratings weighted by importance, then retains the original 0.30 bonus for matching the chosen style. Reviews use stars × 2; value uses 10 minus price in thousands of dollars. The explanation shows each weight, its percentage, its score contribution, and the winner versus the next-best compared product. Concept No. 3 retains this scoring unchanged.
